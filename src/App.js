@@ -1,17 +1,24 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Home from './components/Home';
+import Resume from './components/Resume';
+import Contact from './components/Contact';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <div className="section section-one">
-        <h1>matthew bartchak</h1>
-        <p>work in progress...</p>
+    <Router>
+      <div className="App">
+        <Navigation />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
-      <div className="section section-two"></div>
-    </div>
+    </Router>
   );
-}
+};
 
 export default App;
-
-//<img src={logo} className="App-logo" alt="logo" />

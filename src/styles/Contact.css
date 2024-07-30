@@ -1,0 +1,12 @@
+.contact-section {
+    height: 100vh; /* Full height section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBFBFA; /* Example background color */
+  }
+  
+  .contact-info {
+    text-align: center;
+    max-width: 60vw;
+  }
